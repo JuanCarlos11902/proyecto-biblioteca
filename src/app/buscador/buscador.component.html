@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="col-md-4">
+        <form [formGroup]="formulario">
+            <h4>Introduce Texto para filtrar los Libros!</h4>
+            <input type="text" class="form-control" formControlName="texto" (input)="mandarValorObservable()">
+        </form>
+    </div>
+</div>

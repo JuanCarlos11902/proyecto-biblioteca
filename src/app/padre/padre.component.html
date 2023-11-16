@@ -1,0 +1,5 @@
+<app-login-form (login)="cambiarFlag($event)"></app-login-form>
+<div *ngIf="flag" class="container">
+    <app-buscador></app-buscador>
+    <app-lista-libros></app-lista-libros>
+</div>
