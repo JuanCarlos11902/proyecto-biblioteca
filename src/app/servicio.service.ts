@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Libro } from './libro';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ServicioService {
+export class ServicioService implements OnInit{
   private array!: Libro[]
   constructor() {
 
@@ -14,6 +14,9 @@ export class ServicioService {
     ];
 
    }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
    getLibros(){
     return [...this.array];
@@ -21,15 +24,7 @@ export class ServicioService {
 
    getLibrosFiltrados(filtro:string): Libro[] {
     
-    let arrayFiltrado: Libro[] = new Array()
-
-    this.array.forEach(libro =>{
-      if (libro.tituloLibro.startsWith(filtro)) {
-        arrayFiltrado.push(libro);
-      }
-    })
-
-    return arrayFiltrado;
+    return this.array.filter(libro => libro.tituloLibro().includes(filtro));
 
    }
 

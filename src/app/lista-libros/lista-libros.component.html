@@ -1,7 +1,7 @@
-<div class="container">
-    <div class="col-md-4">
-        <ul class="list-group">
-            <li *ngFor="let libro of arrayFiltrado" class="list-group-item"></li>
-        </ul>
+    <h3> Listado de Libros</h3>
+        <div class="divPagina">
+            <ul class="list-group">
+                <li *ngFor="let libro of arrayFiltrado" class="list-group-item"><pre>{{libro.toString()}}</pre></li>
+            </ul>
     </div>
-</div>
+

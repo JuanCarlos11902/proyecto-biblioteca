@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup} from '@angular/forms';
 import { ServicioObservableService } from '../servicio-observable.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class BuscadorComponent {
   }
 
   mandarValorObservable(){
-    let value: string = this.formulario.value
+    let value: string = this.formulario.value.texto
 
     this.servicio.actualizarValor(value);
 

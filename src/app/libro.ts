@@ -11,13 +11,14 @@ export class Libro {
     }
 
     
-    public get tituloLibro() : string {
+        tituloLibro() : string {
         return this.titulo; 
     }
     
 
     toString() : string{
-        return "Titulo :" + this.titulo + " Autor: " + this.autor + " Fecha: " + this.fecha.toDateString();
+        return `Titulo: ${this.titulo}\nAutor: ${this.autor}\nFecha: ${this.fecha.toDateString()}`;
+
     }
 
 }

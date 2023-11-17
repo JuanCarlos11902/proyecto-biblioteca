@@ -21,6 +21,7 @@ export class ListaLibrosComponent implements OnInit, OnDestroy{
   }
   
   ngOnInit(): void {
+    this.arrayFiltrado = this.servicio.getLibros()
       this.subscription = this.servicioObservable.valorActual$.subscribe(valor =>{
       this.arrayFiltrado = this.servicio.getLibrosFiltrados(valor);
     })

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicioObservableService {
-  private valorActualSubject = new BehaviorSubject<string>('')
+  private valorActualSubject = new Subject<string>();
   valorActual$ = this.valorActualSubject.asObservable();
   
   actualizarValor(value:string){
